@@ -1,57 +1,97 @@
+/* Основной стиль страницы */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     text-align: center;
-    background-color: #f4f4f4;
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: white;
     margin: 0;
     padding: 0;
 }
 
+/* Контейнер таймера */
 .container {
     margin: 50px auto;
-    width: 300px;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
 }
 
+/* Заголовок */
 h1 {
-    font-size: 24px;
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
-#timer {
-    font-size: 48px;
-    margin: 20px 0;
+/* Текущий статус (работа/отдых) */
+#status {
+    font-size: 18px;
+    margin-bottom: 15px;
     font-weight: bold;
 }
 
-.buttons button {
-    font-size: 16px;
-    padding: 10px 15px;
-    margin: 5px;
-    border: none;
-    cursor: pointer;
+/* Дизайн таймера */
+#timer {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
 }
 
+/* Кнопки */
+.buttons button {
+    font-size: 16px;
+    padding: 12px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+/* Цвета кнопок */
 #start {
-    background-color: green;
+    background: #4CAF50;
     color: white;
+    box-shadow: 0 0 10px #4CAF50;
 }
 
 #pause {
-    background-color: orange;
+    background: #FFA500;
     color: white;
+    box-shadow: 0 0 10px #FFA500;
 }
 
 #reset {
-    background-color: red;
+    background: #E53935;
     color: white;
+    box-shadow: 0 0 10px #E53935;
+}
+
+/* Эффект при наведении */
+.buttons button:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+/* Смена цвета при фазах работы и отдыха */
+.work {
+    box-shadow: 0 0 15px #FF6347;
 }
 
 .break {
-    background-color: #4CAF50 !important;
-}
-
-.work {
-    background-color: #FF6347 !important;
+    box-shadow: 0 0 15px #4CAF50;
 }
